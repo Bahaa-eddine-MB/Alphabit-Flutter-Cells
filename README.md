@@ -1,4 +1,4 @@
-# first_session
+# Alphabit Flutter Cell
 
 A new Flutter project.
 
