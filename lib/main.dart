@@ -1,4 +1,3 @@
-import 'package:first_session/pageOne.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,12 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Alphabit Cell',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: PageOne()
-    );
+        title: 'Second session',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: Scaffold());
   }
 }
