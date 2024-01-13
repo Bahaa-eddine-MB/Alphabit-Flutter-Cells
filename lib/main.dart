@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Second session',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue[900]!),
           useMaterial3: true,
         ),
         home: const  MyPage()

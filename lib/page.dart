@@ -6,7 +6,8 @@ class MyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> myList = ["A", "B", "C", "A", "B", "C", "A", "B", "C"];
+    List<String> myList =
+        List.generate(26, (index) => String.fromCharCode(index + 65));
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -18,17 +19,17 @@ class MyPage extends StatelessWidget {
               height: 100,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
+                    color: Colors.blue[900],
+                    borderRadius: const BorderRadius.all(Radius.circular(15))),
                 child: Column(
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.grey[200],
                           borderRadius: BorderRadius.all(Radius.circular(15))),
                       child: Padding(
                         padding: const EdgeInsets.all(30),
@@ -40,7 +41,7 @@ class MyPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 20,
                     ),
                     const Text(
                       'Rise the bar higher',
@@ -53,8 +54,22 @@ class MyPage extends StatelessWidget {
                 ),
               ),
             ),
-            const Text("Rise the bar higher"),
-            const Text("Rise the bar higher"),
+            const SizedBox(
+              height: 20,
+            ),
+            Text("Lets get started",
+                style: TextStyle(
+                    color: Colors.blue[900],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold)),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text("Create new account",
+                style: TextStyle(color: Colors.grey, fontSize: 15)),
+            const SizedBox(
+              height: 20,
+            ),
             SizedBox(
                 height: 50,
                 child: ListView.builder(
@@ -64,16 +79,36 @@ class MyPage extends StatelessWidget {
                     return MyWidget(text: myList[index]);
                   },
                 )),
-            ElevatedButton(
-                onPressed: () {
-                  print("clicked !");
-                },
-                child: Text("Sign up")),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 15),
+                        backgroundColor: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15))),
+                    onPressed: () {
+                      print("clicked !");
+                    },
+                    child: const Text(
+                      "Sign up",
+                      style: TextStyle(color: Colors.white),
+                    )),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Have an account"),
-                TextButton(onPressed: () {}, child: Text("Sign in"))
+                TextButton(onPressed: () {}, child: const Text("Sign in"))
               ],
             )
           ],

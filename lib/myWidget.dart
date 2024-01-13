@@ -7,14 +7,18 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       width: 50,
       height: 50,
-      decoration: const BoxDecoration(
-        color: Colors.purple,
-        borderRadius: BorderRadius.all(Radius.circular(50)),
+      decoration:  BoxDecoration(
+        color: Colors.grey[300],
+        borderRadius: const BorderRadius.all(Radius.circular(50)),
       ),
-      child: Center(child: Text(text)),
+      child: Center(
+          child: Text(
+        text,
+        style: const TextStyle(color: Colors.black87),
+      )),
     );
   }
 }
