@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731482186199",
+    "project_id": "alphabit-cell",
+    "storage_bucket": "alphabit-cell.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731482186199:android:6980199a9b26aa6818eb92",
+        "android_client_info": {
+          "package_name": "com.example.first_session"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAx6OgxSCXftBIq6u-lAWutxGQkjUg5rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
