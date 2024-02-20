@@ -1,4 +1,5 @@
 import 'package:first_session/Controllers/login_controller.dart';
+import 'package:first_session/Screens/register_screen.dart';
 import 'package:first_session/Widget/text_widgets.dart';
 import 'package:first_session/theme/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 15,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(()=>const RegisterPage());
+                  },
                   child: const Text(
                     "Register",
                     style: TextStyle(

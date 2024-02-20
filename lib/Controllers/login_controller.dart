@@ -20,7 +20,11 @@ class LoginController extends GetxController {
         Get.snackbar("Succecc", "login successfully");
       } catch (e) {
         Get.back();
-        Get.snackbar("Error", e.toString());
+        Get.snackbar("Error", "Something went wrong",
+            snackPosition: SnackPosition.BOTTOM,
+            backgroundColor: Colors.red,
+            icon: const Icon(Icons.error),
+            colorText: Colors.white);
       }
     }
   }

@@ -1,10 +1,11 @@
+import 'package:first_session/Screens/profile_screen.dart';
 import 'package:first_session/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Initialize Flutter framework
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -17,9 +18,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return  GetMaterialApp(
+        theme: ThemeData(
+          useMaterial3: false,
+        ),
         debugShowCheckedModeBanner: false,
         title: 'Third session',
-        home: SplashScreen());
+        home: const SplashScreen());
   }
 }
